@@ -97,7 +97,7 @@ MOV AX,1234H
 ```
 
 <div align="center">
-    <img src="/pics/jichu3.1.png" width="400px">
+    <img src="/Assembly/pics/jichu3.1.png" width="400px">
 </div>
 
 **2. 寄存器寻址方式**
@@ -118,7 +118,7 @@ MOV AX,[8054H]
 ```
 
 <div align="center">
-    <img src="/pics/jichu3.2.png" width="400px">
+    <img src="/Assembly/pics/jichu3.2.png" width="400px">
 </div>
 
 **4. 寄存器间接寻址方式**
@@ -131,7 +131,7 @@ MOV AX,[SI]
 ```
 
 <div align="center">
-    <img src="/pics/jichu3.3.png" width="400px">
+    <img src="/Assembly/pics/jichu3.3.png" width="400px">
 </div>
 
 **5. 寄存器相对寻址方式**
@@ -139,7 +139,7 @@ MOV AX,[SI]
 &ensp;&ensp;&ensp;&ensp;操作数在存储器中，操作数的有效地址是一个基址寄存器（BX、BP）或变址寄存器（SI、DI）内容加上指令中给定的8位或16位位移量之和。在一般情况下，如果SI、DI或BX之内容作为有效地址的一部分，那么引用的段寄存器是DS。如果BP的内容作为有效地址的一部分，那么引用的段寄存器是SS。
 
 <div align="center">
-    <img src="/pics/jichu3.4.png" width="400px">
+    <img src="/Assembly/pics/jichu3.4.png" width="400px">
 </div>
 
 例如：假设(DS)=5000H，(DI)=3678H
@@ -149,7 +149,7 @@ MOV AX,[DI+1234H]
 则物理地址=50000+3678+1223=5489BH，如果该字存储单元的内容如下，则(AX)=55AAH
 
 <div align="center">
-    <img src="/pics/jichu3.5.png" width="400px">
+    <img src="/Assembly/pics/jichu3.5.png" width="400px">
 </div>
 
 **6. 基址加变址寻址方式**
@@ -169,7 +169,7 @@ MOV AX,[BX][DI]
 假设该字存储单元的内容如下，则(AX)=1234H
 
 <div align="center">
-    <img src="/pics/jichu3.7.png" width="400px">
+    <img src="/Assembly/pics/jichu3.7.png" width="400px">
 </div>
 
 **7. 相对基址加变址寻址方式**
@@ -177,7 +177,7 @@ MOV AX,[BX][DI]
 &ensp;&ensp;&ensp;&ensp;操作数在存储器中，其有效地址是由：基址寄存器之一的内容与变址寄存器之一的内容及指令中给定的8位或16位位移量相加得到。即：
 
 <div align="center">
-    <img src="/pics/jichu3.8.png" width="400px">
+    <img src="/Assembly/pics/jichu3.8.png" width="400px">
 </div>
 
 &ensp;&ensp;&ensp;&ensp;在一般情况下，如果BP的内容作为有效地址的一部分，则引用的段寄存器是SS，否则是DS。
@@ -201,7 +201,7 @@ MOV AX,1234H[DI][BX]
 &ensp;&ensp;&ensp;&ensp;除了这7种基本的寻址方式外，8086/8088还提供了4种基于转移地址的寻址方式（左边为段内，右边为段间）：
 
 <div align="center">
-    <img src="/pics/jichu3.9.png" width="800px">
+    <img src="/Assembly/pics/jichu3.9.png" width="800px">
 </div>
 
 [◀返回目录](#目录)
